@@ -45,28 +45,8 @@ public class LinkedList {
 			n = num;
 		}
 
-		Node(int num, Node next) {
-			n = num;
-			this.next = next;
-		}
-		
 		public String toString(){
-			String nex = "null";
-			if(next != null){
-				nex = Integer.toString(next.n);
-			}
 			return "Num: " + n;
 		}
-		
 	}
-	
-	public static void main(String[] args){
-		LinkedList ll = new LinkedList();
-		System.out.println(ll);
-		ll.add(2);
-		System.out.println(ll);
-		ll.add(3);
-		System.out.println(ll);
-	}
-	
 }
