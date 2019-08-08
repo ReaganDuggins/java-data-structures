@@ -10,7 +10,7 @@ public class LinkedList {
 	}
 	
 	public void add(int value){
-		if(head == null){
+		if(isHeadless()){
 			head = new Node(value);
 			System.out.println("Head Added\n" + head);
 		}else{
@@ -22,10 +22,14 @@ public class LinkedList {
 			System.out.println("Added\n" + currentNode);
 		}
 	}
-	
+
+	private boolean isHeadless() {
+		return head == null;
+	}
+
 	public String toString(){
 		String list = "::";
-		if(head == null){
+		if(isHeadless()){
 			return list + "null";
 		}
 
