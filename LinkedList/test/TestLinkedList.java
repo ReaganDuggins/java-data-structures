@@ -56,6 +56,20 @@ public class TestLinkedList {
                     "new nodes should add to end"
             );
         }
+
+        @Test
+        public void shouldAddMultipleNewNodesToEnd() {
+            list.add(1);
+            list.add(2);
+            list.add(3);
+            list.add(128512);
+
+            assertEquals(
+                    "::7->1->2->3->128512->null",
+                    list.toString(),
+                    "new nodes should add to end"
+            );
+        }
     }
 
     @Nested
