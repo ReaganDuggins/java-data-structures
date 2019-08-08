@@ -32,15 +32,7 @@ public class LinkedList {
 			return "empty list";
 		}
 
-		String list = "HEAD";
-		for(Node currentNode = head; currentNode != null; currentNode = currentNode.next){
-			list = list
-					+ "("
-					+ currentNode.value
-					+ ")->";
-		}
-
-		return list;
+		return "HEAD" + head.toString();
 	}
 	
 	/**********NODE***********/
@@ -54,7 +46,11 @@ public class LinkedList {
 		}
 
 		public String toString(){
-			return "Num: " + value;
+			String thisNode = "(" + value + ")";
+			String nextNode = hasNext()
+					? "->" + next.toString()
+					: "";
+			return thisNode + nextNode;
 		}
 
 		public boolean hasNext() {

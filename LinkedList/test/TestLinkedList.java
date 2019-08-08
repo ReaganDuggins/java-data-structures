@@ -31,7 +31,7 @@ public class TestLinkedList {
             list.add(1);
 
             assertEquals(
-                    "HEAD(1)->",
+                    "HEAD(1)",
                     list.toString(),
                     "should add first head node"
             );
@@ -51,7 +51,7 @@ public class TestLinkedList {
             list.add(1);
 
             assertEquals(
-                    "HEAD(7)->(1)->",
+                    "HEAD(7)->(1)",
                     list.toString(),
                     "new nodes should add to end"
             );
@@ -65,7 +65,7 @@ public class TestLinkedList {
             list.add(128512);
 
             assertEquals(
-                    "HEAD(7)->(1)->(2)->(3)->(128512)->",
+                    "HEAD(7)->(1)->(2)->(3)->(128512)",
                     list.toString(),
                     "new nodes should add to end"
             );
@@ -80,7 +80,7 @@ public class TestLinkedList {
             LinkedList list = new LinkedList(1);
 
             assertEquals(
-                    "Num: 1",
+                    "(1)",
                     list.head.toString(),
                     "should print nicely"
             );
