@@ -85,6 +85,25 @@ public class TestLinkedList {
                     "empty node should print as null"
             );
         }
+
+        @Test
+        public void shouldReportExistanceOfNextNode() {
+            LinkedList list = new LinkedList(1);
+
+            assertEquals(
+                    false,
+                    list.head.hasNext(),
+                    "lonely head should report no next node"
+            );
+
+            list.add(2);
+
+            assertEquals(
+                    true,
+                    list.head.hasNext(),
+                    "head with next should report it"
+            );
+        }
     }
 
 }

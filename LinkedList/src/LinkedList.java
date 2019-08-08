@@ -15,7 +15,7 @@ public class LinkedList {
 			System.out.println("Head Added\n" + head);
 		}else{
 			Node currentNode = head;
-			while(currentNode.next != null){
+			while(currentNode.hasNext()){
 				currentNode = currentNode.next;
 			}
 			currentNode.next = new Node(value);
@@ -53,6 +53,10 @@ public class LinkedList {
 
 		public String toString(){
 			return "Num: " + value;
+		}
+
+		public boolean hasNext() {
+			return next != null;
 		}
 	}
 }
