@@ -36,7 +36,7 @@ public class DoubleLink {
 					scan.nextLine();
 				}
 				catch(InputMismatchException e){
-					scan.nextLine();/**for some reason, when n is initialized above, 
+					scan.nextLine();/**for some reason, when value is initialized above,
 										if the value throws this error then Scanner 
 										saves the input for the next time scan.nextLine() 
 										is called. So this scan.next is called so that 

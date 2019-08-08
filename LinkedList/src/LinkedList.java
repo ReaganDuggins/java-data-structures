@@ -5,48 +5,50 @@ public class LinkedList {
 	
 	public LinkedList(){}
 	
-	public LinkedList(int n){
-		head = new Node(n);
+	public LinkedList(int value){
+		head = new Node(value);
 	}
 	
-	public void add(int n){
+	public void add(int value){
 		if(head == null){
-			head = new Node(n);
+			head = new Node(value);
 			System.out.println("Head Added\n" + head);
 		}else{
-			Node nex = head;
-			while(nex.next != null){nex = nex.next;}
-			nex.next = new Node(n);
-			System.out.println("Added\n" + nex);
+			Node currentNode = head;
+			while(currentNode.next != null){
+				currentNode = currentNode.next;
+			}
+			currentNode.next = new Node(value);
+			System.out.println("Added\n" + currentNode);
 		}
 	}
 	
 	public String toString(){
-		String s = "::";
+		String list = "::";
 		if(head == null){
-			return s + "null";
+			return list + "null";
 		}
 
-		for(Node n = head; n != null; n = n.next){
-			s = s + n.n + "->";
+		for(Node currentNode = head; currentNode != null; currentNode = currentNode.next){
+			list = list + currentNode.value + "->";
 		}
 
-		s += "null";
-		return s;
+		list += "null";
+		return list;
 	}
 	
 	/**********NODE***********/
 	static class Node {
 		
-		int n;
+		int value;
 		Node next;
 		
-		Node(int num) {
-			n = num;
+		Node(int value) {
+			this.value = value;
 		}
 
 		public String toString(){
-			return "Num: " + n;
+			return "Num: " + value;
 		}
 	}
 }
