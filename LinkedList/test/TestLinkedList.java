@@ -20,7 +20,7 @@ public class TestLinkedList {
         @Test
         public void shouldStringCorrectly() {
             assertEquals(
-                    "::null",
+                    "empty list",
                     list.toString(),
                     "should toString() correctly"
             );
@@ -31,7 +31,7 @@ public class TestLinkedList {
             list.add(1);
 
             assertEquals(
-                    "::1->null",
+                    "HEAD(1)->",
                     list.toString(),
                     "should add first head node"
             );
@@ -51,7 +51,7 @@ public class TestLinkedList {
             list.add(1);
 
             assertEquals(
-                    "::7->1->null",
+                    "HEAD(7)->(1)->",
                     list.toString(),
                     "new nodes should add to end"
             );
@@ -65,7 +65,7 @@ public class TestLinkedList {
             list.add(128512);
 
             assertEquals(
-                    "::7->1->2->3->128512->null",
+                    "HEAD(7)->(1)->(2)->(3)->(128512)->",
                     list.toString(),
                     "new nodes should add to end"
             );
@@ -82,7 +82,7 @@ public class TestLinkedList {
             assertEquals(
                     "Num: 1",
                     list.head.toString(),
-                    "empty node should print as null"
+                    "should print nicely"
             );
         }
 

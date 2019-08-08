@@ -28,16 +28,18 @@ public class LinkedList {
 	}
 
 	public String toString(){
-		String list = "::";
 		if(isHeadless()){
-			return list + "null";
+			return "empty list";
 		}
 
+		String list = "HEAD";
 		for(Node currentNode = head; currentNode != null; currentNode = currentNode.next){
-			list = list + currentNode.value + "->";
+			list = list
+					+ "("
+					+ currentNode.value
+					+ ")->";
 		}
 
-		list += "null";
 		return list;
 	}
 	
