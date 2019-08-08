@@ -26,15 +26,17 @@ public class LinkedList {
 		if(head == null){
 			return s + "null";
 		}
-		for(Node n = head; n.next!= null; n = n.next){
+
+		for(Node n = head; n != null; n = n.next){
 			s = s + n.n + "->";
 		}
+
 		s += "null";
 		return s;
 	}
 	
 	/**********NODE***********/
-	class Node {
+	static class Node {
 		
 		int n;
 		Node next;
